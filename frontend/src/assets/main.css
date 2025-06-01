@@ -1,0 +1,96 @@
+@import './base.css';
+
+
+#app {
+  font-weight: normal;
+  height: 100vh;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: var(--color-menu-text);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-menu-hover);
+  }
+}
+
+.btn {
+  background-color: var(--color-button);
+  border: 1px solid var(--color-button-border);
+  color: var(--color-button-text);
+  cursor: pointer;
+  padding: var(--button-padding);
+  border-radius: var(--button-radius);
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid var(--color-input-border);
+  border-radius: 10px;
+  background-color: var(--color-input-bg);
+  color: var(--color-input-text);
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  border-color: var(--color-input-hover);
+  outline: none;
+}
+
+select::after {
+  content: ' ▼';
+}
+
+.error-text {
+  color: var(--color-error) !important;
+}
+
+.error-border {
+  border: 1px solid var(--color-error) !important;
+}
+
+.px-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.field-input {
+  margin-top: 0.5rem;
+  padding: var(--field-padding);
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--field-radius);
+  background-color: var(--color-input-bg);
+  color: var(--color-input-text);
+}
+
+.field-input:hover {
+  border-color: var(--color-input-hover);
+}
+
+.card-shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.field-message {
+  position: absolute;
+  background: var(--color-card-bg);
+  width: fit-content;
+  max-width: 300px;
+  padding: 0.5rem;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--cadr-radius);
+  font-size: 0.875rem;
+  z-index: 998;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

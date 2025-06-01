@@ -1,0 +1,277 @@
+:root {
+  /* === Основные цвета для светлой темы === */
+  --color-primary-light: #0077b6;
+  /* Темно-лазурно-синий */
+  --color-secondary-light: #00a4c9;
+  /* Лазурно-синий */
+  --color-tertiary-light: #003366;
+  /* Глубокий синий для контраста */
+
+  /* === Основные цвета для темной темы === */
+  --color-primary-dark: #1e90ff;
+  /* Светло-лазурно-синий для контраста */
+  --color-secondary-dark: #39c5bb;
+  /* Светлый темный синий */
+  --color-tertiary-dark: #4c8c99;
+  /* Средний синий для контраста */
+
+  /* === Цвета сообщений === */
+  --color-success-light: #16c60c;
+  /* Яркий зеленый */
+  --color-success-light-hover: #13b60b;
+  /* Немного темнее для наведения */
+
+  --color-error-light: #ff1e56;
+  /* Яркий красный */
+  --color-error-light-hover: #e00c46;
+  /* Немного темнее для наведения */
+
+  --color-warning-light: #ffb900;
+  /* Ярко-желтый */
+  --color-warning-light-hover: #eaa700;
+  /* Немного темнее для наведения */
+
+  --color-info-light: #00c8ff;
+  /* Лазурно-синий */
+  --color-info-light-hover: #00a1cc;
+  /* Немного темнее для наведения */
+
+  --color-success-dark: #00a200;
+  /* Темный зеленый */
+  --color-success-dark-hover: #008c00;
+  /* Немного темнее для наведения */
+
+  --color-error-dark: #d80032;
+  /* Темный красный */
+  --color-error-dark-hover: #c1002b;
+  /* Немного темнее для наведения */
+
+  --color-warning-dark: #ff8c00;
+  /* Темный оранжевый */
+  --color-warning-dark-hover: #e47d00;
+  /* Немного темнее для наведения */
+
+  --color-info-dark: #009ec3;
+  /* Темный лазурно-синий */
+  --color-info-dark-hover: #0083a1;
+  /* Немного темнее для наведения */
+
+  /* === Светлая тема === */
+  --color-light-opacity: rgba(255, 255, 255, 0.5);
+  --color-light-100: #f4f7fc;
+  --color-light-200: #e4ebf3;
+  --color-light-300: #cfd7e0;
+  --color-light-400: #1e1e2e;
+  --color-light-500: #6b7280;
+
+  --color-light-border-100: #d1d5db;
+  --color-light-border-200: #9ca3af;
+  --color-light-input-hover: #7f8ea3;
+
+  /* === Тёмная тема === */
+  --color-dark-opacity: rgba(0, 0, 0, 0.5);
+  --color-dark-100: #0d0d14;
+  --color-dark-200: #161625;
+  --color-dark-300: #222235;
+  --color-dark-400: #e5e7eb;
+  --color-dark-500: #a1a1aa;
+
+  --color-dark-border-100: #323248;
+  --color-dark-border-200: #51516d;
+  --color-dark-input-hover: #63638f;
+
+  /* === Кнопки === */
+  --color-button-text-light: #ffffff;
+  --color-button-text-dark: #ffffff;
+  --color-button-hover-light: #0088cc;
+  /* Темный синий для кнопок */
+  --color-button-hover-dark: #005b7f;
+  /* Темно-синий для кнопок */
+  --color-button-disabled-light: #c5c5c5;
+  --color-button-disabled-dark: #595975;
+
+  /* === Оттенки для текста === */
+  --color-text-primary-light: #1e1e2e;
+  /* Основной текст для светлой темы */
+  --color-text-secondary-light: #6b7280;
+  /* Текст для вторичных элементов (подзаголовков) */
+  --color-text-muted-light: #9ca3af;
+  /* Слабый текст для подсказок и второстепенных элементов */
+
+  --color-text-primary-dark: #ffffff;
+  /* Основной текст для темной темы */
+  --color-text-secondary-dark: #b0b0b0;
+  /* Текст для вторичных элементов (подзаголовков) */
+  --color-text-muted-dark: #63638f;
+  /* Слабый текст для подсказок и второстепенных элементов */
+}
+
+/* === Блок 2: Светлая тема === */
+[data-theme="light"] {
+  --color-background: var(--color-light-300);
+  --color-background-soft: var(--color-light-100);
+  --color-background-muted: var(--color-light-200);
+
+  --color-border: var(--color-light-border-100);
+  --color-border-hover: var(--color-light-border-200);
+
+  --color-menu-bg: var(--color-light-100);
+  /* Светлый синий оттенок для фона меню */
+  --color-menu-text: var(--color-text-primary-light);
+  /* Яркий темно-синий для текста в меню */
+  --color-menu-hover: var(--color-primary-light);
+  /* Лазурно-синий при наведении */
+  --color-menu-active: var(--color-secondary-light);
+  /* Темно-синий для активного элемента */
+
+  --color-button: var(--color-primary-light);
+  /* Лазурно-синий для кнопок */
+  --color-button-border: var(--color-light-border-100);
+  --color-button-text: var(--color-button-text-light);
+  --color-button-hover: var(--color-button-hover-light);
+  --color-button-disabled: var(--color-button-disabled-light);
+
+  --color-input-bg: var(--color-light-100);
+  --color-input-border: var(--color-light-border-100);
+  --color-input-hover: var(--color-light-input-hover);
+  --color-input-text: var(--color-light-400);
+
+  --color-card-bg: var(--color-light-200);
+  --color-card-bg-opacity: var(--color-light-opacity);
+  --color-card-border-opacity: var(--color-dark-opacity);
+  --color-card-border: var(--color-light-border-100);
+  --color-card-text: var(--color-text-primary-light);
+
+  --color-heading: var(--color-primary-light);
+  /* Лазурно-синий для заголовков */
+  --color-text: var(--color-text-primary-light);
+  --color-text-muted: var(--color-text-muted-light);
+
+  --color-success: var(--color-success-light);
+  --color-error: var(--color-error-light);
+  --color-warning: var(--color-warning-light);
+  --color-info: var(--color-info-light);
+  /* === Яркие оттенки для состояния при наведении === */
+  --color-success-bright: var(--color-success-light-hover);
+  /* Яркий зеленый при наведении */
+  --color-error-bright: var(--color-error-light-hover);
+  /* Яркий красный при наведении */
+  --color-warning-bright: var(--color-warning-light-hover);
+  /* Ярко-желтый при наведении */
+  --color-info-bright: var(--color-info-light-hover);
+  /* Лазурно-синий при наведении */
+
+  --color-chart-bg: var(--color-light-100);
+  --color-chart-line: var(--color-dark-100);
+
+  --color-scrollbar: var(--color-light-300);
+}
+
+/* === Блок 3: Тёмная тема === */
+[data-theme="dark"] {
+  --color-background: var(--color-dark-100);
+  --color-background-soft: var(--color-dark-200);
+  --color-background-muted: var(--color-dark-300);
+
+  --color-border: var(--color-dark-border-100);
+  --color-border-hover: var(--color-dark-border-200);
+
+  --color-menu-bg: var(--color-dark-200);
+  /* Темный синий фон для меню */
+  --color-menu-text: var(--color-text-primary-dark);
+  /* Белый текст для контраста */
+  --color-menu-hover: var(--color-primary-dark);
+  /* Лазурно-синий при наведении */
+  --color-menu-active: var(--color-secondary-dark);
+  /* Темно-синий для активного элемента */
+
+  --color-button: var(--color-primary-dark);
+  /* Лазурно-синий для кнопок */
+  --color-button-border: var(--color-dark-border-100);
+  --color-button-text: var(--color-button-text-dark);
+  --color-button-hover: var(--color-button-hover-dark);
+  --color-button-disabled: var(--color-button-disabled-dark);
+
+  --color-input-bg: var(--color-dark-200);
+  --color-input-border: var(--color-dark-border-100);
+  --color-input-hover: var(--color-dark-input-hover);
+  --color-input-text: var(--color-dark-400);
+
+  --color-card-bg: var(--color-dark-300);
+  --color-card-bg-opacity: var(--color-dark-opacity);
+  --color-card-border-opacity: var(--color-light-opacity);
+  --color-card-border: var(--color-dark-border-100);
+  --color-card-text: var(--color-text-primary-dark);
+
+  --color-heading: var(--color-primary-dark);
+  /* Лазурно-синий для заголовков */
+  --color-text: var(--color-text-primary-dark);
+  --color-text-muted: var(--color-text-muted-dark);
+
+  --color-success: var(--color-success-dark);
+  --color-error: var(--color-error-dark);
+  --color-warning: var(--color-warning-dark);
+  --color-info: var(--color-info-dark);
+  /* === Яркие оттенки для состояния при наведении === */
+  --color-success-bright: var(--color-success-dark-hover);
+  /* Яркий зеленый при наведении */
+  --color-error-bright: var(--color-error-dark-hover);
+  /* Яркий красный при наведении */
+  --color-warning-bright: var(--color-warning-dark-hover);
+  /* Ярко-желтый при наведении */
+  --color-info-bright: var(--color-info-dark-hover);
+  /* Лазурно-синий при наведении */
+
+  --color-chart-bg: var(--color-dark-100);
+  --color-chart-line: var(--color-light-100);
+
+  --color-scrollbar: var(--color-dark-300);
+}
+
+:root {
+  --field-padding: 0.5rem;
+  --field-radius: 5px;
+
+  --button-padding: 0.5rem;
+  --button-radius: 5px;
+
+  --card-padding: 8px;
+  --card-large-padding: 16px;
+  --cadr-radius: 4px;
+  --cadr-large-radius: 8px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.3s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
