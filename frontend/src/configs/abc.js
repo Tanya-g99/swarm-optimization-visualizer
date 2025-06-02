@@ -92,6 +92,7 @@ const abc = {
     },
     onPopulationChange: (form) => {
         // abc.state.foragerSize.value = Math.floor(form.populationSize / 2);
+
         abc.state.observerSize.value = form.populationSize - abc.state.foragerSize.value;
         abc.fields.foragerSize.validate(form);
         abc.fields.observerSize.validate(form);

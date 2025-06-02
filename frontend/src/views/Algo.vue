@@ -62,14 +62,11 @@ const onFieldUpdate = (key) => {
 }
 
 const handlePopulationSizeUpdate = (newVal) => {
-    if (config.state.populationSize) {
-        config.state.populationSize.value = newVal;
-        if (typeof config.onPopulationChange === 'function') {
-            config.onPopulationChange();
-        }
-        if (config.fields.foragerSize) validateField('foragerSize');
-        if (config.fields.observerSize) validateField('observerSize');
+    if (typeof config.onPopulationChange === 'function') {
+        config.onPopulationChange(form.value);
     }
+    if (config.fields.foragerSize) validateField('foragerSize');
+    if (config.fields.observerSize) validateField('observerSize');
 }
 
 

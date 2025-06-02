@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"time"
 
 	"graduate_work/algos"
 
@@ -47,10 +46,8 @@ func handleWebSocket[T RequestType](w http.ResponseWriter, r *http.Request, cons
 			conn.Close()
 		}()
 
-		// Канал для уведомления об отключении клиента
 		disconnect := make(chan struct{})
 
-		// Горутина, отслеживающая закрытие соединения
 		go func() {
 			for {
 				_, _, err := conn.ReadMessage()
@@ -62,16 +59,14 @@ func handleWebSocket[T RequestType](w http.ResponseWriter, r *http.Request, cons
 			}
 		}()
 
-		// Обёртка send с проверкой, не отключился ли клиент
 		send := func(response algos.Response) error {
 			select {
 			case <-disconnect:
 				return fmt.Errorf("соединение с клиентом закрыто")
 			default:
-				// продолжаем
 			}
 
-			fmt.Println(time.Now())
+			// fmt.Println(time.Now())
 			data, err := json.Marshal(response)
 			if err != nil {
 				fmt.Println("Ошибка формирования JSON:", err)
